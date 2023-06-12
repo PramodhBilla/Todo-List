@@ -1,0 +1,12 @@
+<div>
+    <input [(ngModel)]="newTodo" placeholder="Enter a new todo" />
+    <button (click)="addTodo()">Add</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let todo of todos; let i = index">
+      {{ todo }}
+      <button (click)="deleteTodo(i)">Delete</button>
+    </li>
+  </ul>
+  
